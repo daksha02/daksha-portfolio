@@ -48,7 +48,7 @@ overflow-x:hidden;
 
 nav{
 display:flex;
-justify-content:space-between;
+justify-content:flex-end;
 align-items:center;
 padding:22px 8%;
 position:sticky;
@@ -57,13 +57,6 @@ background:rgba(7,17,31,0.94);
 backdrop-filter:blur(12px);
 border-bottom:1px solid rgba(255,255,255,0.04);
 z-index:1000;
-}
-
-.logo{
-font-size:30px;
-font-weight:800;
-color:#60a5fa;
-letter-spacing:-1px;
 }
 
 .nav-links{
@@ -77,7 +70,6 @@ color:#cbd5e1;
 font-size:15px;
 font-weight:500;
 transition:0.3s;
-position:relative;
 }
 
 .nav-links a:hover{
@@ -330,33 +322,6 @@ transform:translateY(-2px);
 border-color:#2563eb;
 }
 
-/* METRICS */
-
-.metrics{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:22px;
-margin-top:35px;
-}
-
-.metric{
-padding:28px;
-background:#0f172a;
-border-radius:18px;
-border:1px solid rgba(255,255,255,0.04);
-}
-
-.metric h3{
-font-size:36px;
-color:#60a5fa;
-margin-bottom:10px;
-}
-
-.metric p{
-color:#cbd5e1;
-font-size:15px;
-}
-
 /* EXPERIENCE */
 
 .experience h3{
@@ -486,13 +451,22 @@ margin-top:50px;
 
 @media(max-width:768px){
 
+nav{
+justify-content:center;
+overflow-x:auto;
+}
+
+.nav-links{
+gap:22px;
+}
+
 .hero{
 padding-top:40px;
 gap:50px;
 }
 
 .hero-left h1{
-font-size:48px;
+font-size:58px;
 white-space:normal;
 }
 
@@ -524,14 +498,6 @@ width:260px;
 height:260px;
 }
 
-.nav-links{
-gap:18px;
-}
-
-.nav-links a{
-font-size:14px;
-}
-
 .section{
 padding:45px 6%;
 }
@@ -551,10 +517,6 @@ font-size:28px;
 <!-- NAVBAR -->
 
 <nav>
-
-<div class="logo">
-Daksha Sharma
-</div>
 
 <div class="nav-links">
 <a href="#about">About</a>
