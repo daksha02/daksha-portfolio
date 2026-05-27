@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Daksha Sharma | Cybersecurity Engineer</title>
+<title>Daksha Sharma | Network Security Engineer</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -15,61 +15,358 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
+<style>
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+/* BODY */
+
+body{
+font-family:'Inter',sans-serif;
+background:#0b1120;
+color:white;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#111827;
+border-bottom:1px solid rgba(255,255,255,0.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav h2{
+font-size:20px;
+font-weight:700;
+color:#60a5fa;
+}
+
+nav div{
+display:flex;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#d1d5db;
+font-size:15px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#60a5fa;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:70px 8%;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.hero-left{
+flex:1;
+min-width:300px;
+}
+
+.hero-left h1{
+font-size:52px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero-left h3{
+font-size:22px;
+font-weight:500;
+color:#60a5fa;
+margin-bottom:18px;
+}
+
+.hero-left p{
+max-width:600px;
+color:#cbd5e1;
+font-size:16px;
+margin-bottom:25px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 24px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+display:inline-flex;
+align-items:center;
+gap:8px;
+}
+
+.primary-btn{
+background:#2563eb;
+color:white;
+}
+
+.primary-btn:hover{
+background:#3b82f6;
+}
+
+.secondary-btn{
+border:1px solid #2563eb;
+color:#60a5fa;
+}
+
+.secondary-btn:hover{
+background:#1e293b;
+}
+
+/* PROFILE IMAGE */
+
+.hero-right{
+flex:1;
+display:flex;
+justify-content:center;
+min-width:280px;
+}
+
+.profile-box{
+background:#111827;
+padding:18px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 0 30px rgba(37,99,235,0.15);
+text-align:center;
+}
+
+.profile-img{
+width:260px;
+height:260px;
+object-fit:cover;
+border-radius:18px;
+}
+
+.status{
+margin-top:12px;
+font-size:14px;
+color:#86efac;
+}
+
+/* SECTION */
+
+.section{
+padding:20px 8%;
+}
+
+.section-title{
+font-size:24px;
+margin-bottom:15px;
+color:#60a5fa;
+font-weight:600;
+border-bottom:1px solid rgba(255,255,255,0.08);
+padding-bottom:10px;
+}
+
+/* GLASS CARD */
+
+.glass{
+background:#111827;
+padding:22px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.08);
+margin-bottom:20px;
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:10px;
+}
+
+.skill{
+padding:10px 16px;
+background:#1e293b;
+border:1px solid rgba(255,255,255,0.08);
+border-radius:30px;
+font-size:14px;
+color:#dbeafe;
+}
+
+/* PROJECTS */
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:18px;
+}
+
+.project-card{
+background:#111827;
+padding:22px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(37,99,235,0.18);
+}
+
+.project-card h3{
+margin-bottom:10px;
+color:#93c5fd;
+}
+
+.project-card p{
+font-size:15px;
+color:#cbd5e1;
+}
+
+/* CERTIFICATIONS */
+
+.cert-list{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.cert{
+background:#1e293b;
+padding:14px 18px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+/* CONTACT */
+
+.contact p{
+margin-bottom:12px;
+}
+
+.contact a{
+color:#93c5fd;
+text-decoration:none;
+}
+
+.contact a:hover{
+text-decoration:underline;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:25px;
+margin-top:40px;
+font-size:14px;
+color:#94a3b8;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+padding-top:40px;
+}
+
+.hero-left h1{
+font-size:38px;
+}
+
+.hero-left h3{
+font-size:18px;
+}
+
+.profile-img{
+width:220px;
+height:220px;
+}
+
+nav{
+padding:15px 5%;
+}
+
+.section{
+padding:20px 5%;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 
-<nav class="navbar">
+<nav>
 
-<div class="logo">
-Daksha Sharma
-</div>
+<h2>Daksha Sharma</h2>
 
-<div class="nav-links">
+<div>
 <a href="#about">About</a>
-<a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </div>
 
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 
 <section class="hero">
 
 <div class="hero-left">
 
-<p class="intro">
-NETWORK SECURITY • CYBERSECURITY • FIREWALL ENGINEERING
-</p>
+<h1>Daksha Sharma</h1>
 
-<h1>
-Daksha Sharma
-</h1>
+<h3>
+Assistant System Engineer | Palo Alto Networks
+</h3>
 
-<h2>
-Assistant System Engineer
-<span>@ Palo Alto Networks</span>
-</h2>
+<p>
 
-<p class="hero-text">
-
-Focused on enterprise firewall security, VPN connectivity,
-traffic analysis, and secure infrastructure operations.
+Focused on enterprise firewall security,
+VPN connectivity, traffic analysis,
+and secure infrastructure operations.
 
 Experienced in Palo Alto firewall administration,
-network troubleshooting, threat analysis,
-and enterprise security environments.
+network troubleshooting,
+and enterprise cybersecurity environments.
 
 </p>
 
 <div class="hero-buttons">
 
 <a href="Daksha_Sharma_Final_ATS_Resume.pdf"
-class="primary-btn"
+class="btn primary-btn"
 target="_blank">
 
 <i class="fa-solid fa-file-arrow-down"></i>
@@ -78,7 +375,7 @@ Download Resume
 </a>
 
 <a href="https://www.linkedin.com/in/daksha-sharma-09b2a7232/"
-class="secondary-btn"
+class="btn secondary-btn"
 target="_blank">
 
 <i class="fa-brands fa-linkedin"></i>
@@ -92,13 +389,12 @@ LinkedIn
 
 <div class="hero-right">
 
-<div class="profile-card">
+<div class="profile-box">
 
 <img src="profile.jpg" class="profile-img">
 
 <div class="status">
-<i class="fa-solid fa-circle"></i>
-Available For Opportunities
+● Open To Opportunities
 </div>
 
 </div>
@@ -115,7 +411,7 @@ Available For Opportunities
 About Me
 </h2>
 
-<div class="glass-card">
+<div class="glass">
 
 <p>
 
@@ -123,8 +419,11 @@ Assistant System Engineer with hands-on experience
 supporting enterprise network security operations using
 Palo Alto firewall technologies.
 
-Experienced in VPN configuration, firewall policy deployment,
-traffic analysis, NAT configuration, SSL decryption,
+Experienced in VPN configuration,
+firewall policy deployment,
+traffic analysis,
+NAT configuration,
+SSL decryption,
 and secure enterprise connectivity.
 
 Passionate about cybersecurity operations,
@@ -139,26 +438,30 @@ and enterprise firewall management.
 
 <!-- SKILLS -->
 
-<section class="section" id="skills">
+<section class="section">
 
 <h2 class="section-title">
 Core Competencies
 </h2>
 
-<div class="skills-grid">
+<div class="glass">
 
-<div class="skill-card">Palo Alto Firewalls</div>
-<div class="skill-card">Panorama</div>
-<div class="skill-card">VPN (IPSec/SSL)</div>
-<div class="skill-card">NAT</div>
-<div class="skill-card">Wireshark</div>
-<div class="skill-card">Traffic Analysis</div>
-<div class="skill-card">Firewall Policies</div>
-<div class="skill-card">TCP/IP</div>
-<div class="skill-card">VLAN Segmentation</div>
-<div class="skill-card">Routing & Switching</div>
-<div class="skill-card">Linux CLI</div>
-<div class="skill-card">Threat Prevention</div>
+<div class="skills">
+
+<div class="skill">Palo Alto Firewalls</div>
+<div class="skill">Panorama</div>
+<div class="skill">VPN (IPSec/SSL)</div>
+<div class="skill">NAT</div>
+<div class="skill">Wireshark</div>
+<div class="skill">Traffic Analysis</div>
+<div class="skill">Firewall Policies</div>
+<div class="skill">TCP/IP</div>
+<div class="skill">VLAN</div>
+<div class="skill">Routing & Switching</div>
+<div class="skill">Linux CLI</div>
+<div class="skill">Threat Prevention</div>
+
+</div>
 
 </div>
 
@@ -172,17 +475,17 @@ Core Competencies
 Experience
 </h2>
 
-<div class="timeline-card">
+<div class="glass">
 
 <h3>
 Assistant System Engineer — IOPEX Technologies
 </h3>
 
-<p class="date">
+<p style="margin-bottom:15px;color:#94a3b8;">
 Aug 2024 – Present
 </p>
 
-<ul>
+<ul style="padding-left:18px;">
 
 <li>
 Supporting Palo Alto firewall infrastructure for enterprise network security operations.
@@ -222,58 +525,54 @@ Projects
 
 <div class="project-card">
 
-<div class="project-top">
-
 <h3>
 Enterprise Network Segmentation Lab
 </h3>
 
-<span class="project-tag">
-VLAN
-</span>
-
-</div>
-
 <p>
 
-Designed segmented enterprise network architecture using VLAN implementation and firewall-based access control policies.
+Designed segmented enterprise network architecture
+using VLAN implementation and firewall-based access control policies.
 
 </p>
-
-<div class="tech-stack">
-<span>Palo Alto</span>
-<span>VLAN</span>
-<span>Routing</span>
-</div>
 
 </div>
 
 <div class="project-card">
 
-<div class="project-top">
-
 <h3>
 Firewall Policy & Traffic Analysis Lab
 </h3>
 
-<span class="project-tag">
-Wireshark
-</span>
-
-</div>
-
 <p>
 
-Created and validated firewall policies using Wireshark packet analysis and traffic monitoring techniques.
+Created and validated firewall policies using
+Wireshark packet analysis and traffic monitoring techniques.
 
 </p>
 
-<div class="tech-stack">
-<span>Wireshark</span>
-<span>NAT</span>
-<span>VPN</span>
 </div>
 
+</div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section class="section">
+
+<h2 class="section-title">
+Certifications
+</h2>
+
+<div class="cert-list">
+
+<div class="cert">
+Cybersecurity Apprentice — Palo Alto Networks
+</div>
+
+<div class="cert">
+Cybersecurity Practitioner — Palo Alto Networks
 </div>
 
 </div>
@@ -288,59 +587,36 @@ Created and validated firewall policies using Wireshark packet analysis and traf
 Contact
 </h2>
 
-<div class="contact-card">
+<div class="glass contact">
 
-<div class="contact-item">
+<p>
 
-<i class="fa-solid fa-envelope"></i>
-
+📧 Email:
 <a href="mailto:daksha2002@gmail.com">
 daksha2002@gmail.com
 </a>
 
-</div>
+</p>
 
-<div class="contact-item">
+<p>
 
-<i class="fa-brands fa-linkedin"></i>
-
+🔗 LinkedIn:
 <a href="https://linkedin.com/in/daksha-sharma-09b2a7232"
 target="_blank">
 
-LinkedIn Profile
+linkedin.com/in/daksha-sharma-09b2a7232
 
 </a>
 
-</div>
+</p>
 
-<div class="contact-item">
-
-<i class="fa-solid fa-phone"></i>
-
-<span>
-+91-9013800812
-</span>
-
-</div>
-
-<div class="contact-item">
-
-<i class="fa-solid fa-globe"></i>
-
-<a href="https://daksha02.github.io/daksha-portfolio/"
-target="_blank">
-
-Portfolio Website
-
-</a>
-
-</div>
+<p>
+📱 Phone: +91-9013800812
+</p>
 
 </div>
 
 </section>
-
-<!-- FOOTER -->
 
 <footer>
 
